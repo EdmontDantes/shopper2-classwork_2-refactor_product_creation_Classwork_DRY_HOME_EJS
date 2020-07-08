@@ -1,0 +1,24 @@
+Assignment on Wed 08-07-2020 1421
+
+
+The home.ejs page is not DRY
+Do not disturb the database.
+Refactor the page so that the code does not repeat but the page and cards still render correctly
+You may have to do some work in your route for the file
+
+
+Developer Log steps:
+
+Planned out steps:
+
+0. !!backup home.ejs
+
+1. create an array module exports file with pictures link, name of product and description 
+in dir routes/data/publicData.js from views/main/home.ejs page manually inputting correct data and
+module.exports into a variable called publicProductsData
+
+2. in routes/index.js import a variable publicProductsData from step 1 and in router.get('/) on line 30
+after if(req.user) import aforementioned variable into res.render('main/home.ejs)
+
+3. in views/main/home.ejs remove all but one card and wrap it with ejsfor loop 9 times for displaying
+the data from step 1.
